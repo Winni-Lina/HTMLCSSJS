@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(4,100px);
+            grid-auto-rows: 50px;
+            gap: 10px 10px;
+            grid-template-areas: 
+            "box1 box1 box2 box2"
+            "box1 box1 box3 box4"
+            "box5 box5 box3 box4";
+            background-color: black;
+        }
+
+        div{
+            background-color: yellow;
+            text-align: center;
+        }
+
+        .item1{grid-area: box1;}
+        .item2{grid-area: box2;}
+        .item3{grid-area: box3;}
+        .item4{grid-area: box4;}
+        .item5{grid-area: box5;}
+    </style>
+</head>
+<body class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</body>
+</html>
