@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치도</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <h1>자리 배치도</h1>
+    
+    <div class="container">
+        <table>
+            <script>
+                let cnt_people = prompt("참석자 수를 입력하세요.");
+                let oneLine_sits = prompt("한줄에 앉을 사람의 수를 입력하세요.");
+
+                let cnt_lines = cnt_people / oneLine_sits;
+                if(cnt_people % oneLine_sits != 0) cnt_lines + 1;
+
+                let num_table = 1;
+
+                for(let i = 0; i <= cnt_lines; i++){
+                    document.write("<tr>");
+
+                    for(let j = 0; j < oneLine_sits; j++){
+                        if(cnt_people == 0) break;
+                        document.write(`<td>좌석 ${num_table++}</td>`);
+                        cnt_people--;
+                    }
+
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+    </div>
+</body>
+</html>
